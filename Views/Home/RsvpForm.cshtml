@@ -1,4 +1,5 @@
-﻿@{
+﻿@model PartyInvites.Models.GuestResponse //The @model expression specifies that the view expects to receive a GuestResponse object as its view model. Each element is associated with the model property using the asp-for attribute, which is another tag helper attribute.
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -8,6 +9,37 @@
     <title>RsvpForm</title>
 </head>
 <body>
+    <form asp-action="RsvpForm" method="post">
+        <div>
+            <label asp-for="Name">Your name:</label>
+            <input asp-for="Name" /> <!--The asp-for (tag helper) attribute configures the elements to tie them to the view model object
+                Here is an example of the HTML that the tag helpers produce:
+                <p>
+                    <label for="Name">Your name:</label>
+                    <input type="text" id="Name" name="Name" value="">
+                </p>
+                            The asp-for attribute on the label element sets the value of the -for attribute. The asp-for attribute on
+            the input element sets the id and name elements. This may not look especially useful, but you will see that
+            associating elements with a model property offers additional advantages as the application functionality is
+            defined.-->
+        </div>
+        <div>
+            <label asp-for="Email">Your email:</label>
+            <input asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="Phone">Your phone:</label>
+            <input asp-for="Phone" />
+        </div>
+        <div>
+            <label asp-for="WillAttend">Will you attend?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yes, I'll be there</option>
+                <option value="false">No, I can't come</option>
+            </select>
+        </div>
+    </form>
     <div>
         This is the RsvpForm.cshtml View
     </div>
