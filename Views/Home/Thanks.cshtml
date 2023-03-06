@@ -11,7 +11,7 @@
 <body>
     <div>
         <h1>Thank you, @Model?.Name!</h1>
-        @if (Model?.WillAttend == true)
+        @if (Model?.WillAttend == true) //To access the value of a property in the domain object, I use an @Model.<PropertyName> expression.
         {
             @:It's great that you're coming. The drinks are already in the fridge!
         }
@@ -20,7 +20,9 @@
             @:Sorry to hear that you can't make it, but thanks for letting us know.
         }
     </div>
-    Click
-    <a asp-action="ListResponses">here</a> to see who is coming.
+    <div>
+        Click
+        <a asp-action="ListResponses">here</a> to see who is coming.
+    </div>
 </body>
 </html>

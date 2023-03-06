@@ -21,7 +21,13 @@ namespace PartyInvites.Controllers
         [HttpPost] //This version of the action will be responsible for receiving submitted data and deciding what to do with it.
         public ViewResult RsvpForm(GuestResponse guestResponse) //defines the method that will handle the received request
         {
-            return View();
+            Repository.AddResponse(guestResponse);
+            return View("Thanks", guestResponse);
+        }
+
+        public ViewResult ListResponses()
+        {
+            return View(Repository.Responses.Where(r => r.WillAttend == true));
         }
     }
 }
