@@ -10,6 +10,7 @@
 </head>
 <body>
     <form asp-action="RsvpForm" method="post">
+        <div asp-validation-summary="All"></div> <!--The asp-validation-summary attribute is another tag helper attribute that generates HTML that displays any validation errors that have been detected. The value of the attribute is used to configure the type of validation summary that is generated. In this case, the value of All indicates that the summary should display all errors that have been detected. The summary is generated using the ValidationSummary tag helper, which is defined in the Microsoft.AspNetCore.Mvc.TagHelpers assembly.-->
         <div>
             <label asp-for="Name">Your name:</label>
             <input asp-for="Name" /> <!--The asp-for (tag helper) attribute configures the elements to tie them to the view model object

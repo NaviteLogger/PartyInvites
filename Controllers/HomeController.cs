@@ -24,7 +24,7 @@ namespace PartyInvites.Controllers
         public ViewResult RsvpForm(GuestResponse guestResponse) //defines the method that will handle the received request
         {
             ///<summary>
-            ///A property called ModelState  provides details of the outcome of the model binding process.If
+            ///A property called ModelState provides details of the outcome of the model binding process.If
             ///</summary>
             if (ModelState.IsValid)
             {
