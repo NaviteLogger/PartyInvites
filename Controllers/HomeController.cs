@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using PartyInvites.Models;
 
@@ -21,8 +23,18 @@ namespace PartyInvites.Controllers
         [HttpPost] //This version of the action will be responsible for receiving submitted data and deciding what to do with it.
         public ViewResult RsvpForm(GuestResponse guestResponse) //defines the method that will handle the received request
         {
-            Repository.AddResponse(guestResponse);
-            return View("Thanks", guestResponse);
+            ///<summary>
+            ///A property called ModelState  provides details of the outcome of the model binding process.If
+            ///</summary>
+            if (ModelState.IsValid)
+            {
+                Repository.AddResponse(guestResponse);
+                return View("Thanks", guestResponse);
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public ViewResult ListResponses()

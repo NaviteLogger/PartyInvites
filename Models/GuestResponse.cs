@@ -2,6 +2,9 @@
 
 namespace PartyInvites.Models
 {
+    /// <summary>
+    /// ASP.NET Core detects the attributes and uses them to validate data during the model-binding process.
+    /// </summary>
     public class GuestResponse
     {
         [Required(ErrorMessage = "Please enter your name")]
