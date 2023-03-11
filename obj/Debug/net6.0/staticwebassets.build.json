@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cJ6+SbAyFrn2mMTC0OHS6/BNsjbNhUTTxsmkqg5wAZ0=",
+  "Hash": "3jyQWVmqKmZKjUontnHW50RglIVJYUjFWfR5BtEW0zM=",
   "Source": "PartyInvites",
   "BasePath": "_content/PartyInvites",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\NaviteLogger\\OneDrive\\Programowanie\\ASP.NET\\PartyInvites\\wwwroot\\css\\styles.cs",
+      "SourceId": "PartyInvites",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\NaviteLogger\\OneDrive\\Programowanie\\ASP.NET\\PartyInvites\\wwwroot\\",
+      "BasePath": "_content/PartyInvites",
+      "RelativePath": "css/styles.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.cs"
     },
     {
       "Identity": "C:\\Users\\NaviteLogger\\OneDrive\\Programowanie\\ASP.NET\\PartyInvites\\wwwroot\\favicon.ico",
